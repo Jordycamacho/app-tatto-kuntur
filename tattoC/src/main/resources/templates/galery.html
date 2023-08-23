@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="~{layout/base :: head}"></head>
+
+<body>
+	
+    <div class="container-fluid fondo">
+		
+        <nav th:replace="~{layout/nav :: nav}"></nav>
+    
+    </div>
+    
+    <div class="portada">
+		
+        <img th:src="@{/img/inicio.jpg}" class="img-inicio" />
+        
+    </div>  
+
+    <section id="galeria" class="container">
+
+        <div class="text-center pt-5">
+
+            <h1 class="titulo-p">TATUAJES</h1>
+
+            <div class="separador"></div>
+
+            <p class="texto-p">
+                Cada imagen representa un trabajo cuidadosamente diseñado y ejecutado, un testimonio del tiempo y la atención que 
+                dedicamos a cada cliente. Puedes explorar nuestra galería para inspirarte, descubrir nuevas ideas y obtener una idea 
+                de cómo cada estilo puede adaptarse a tus gustos personales.
+            </p>
+        </div>
+
+        
+         <div class="con-img dano">
+
+            <img th:src="@{/img/ribete-3-Z.png}" class="ns">
+
+        </div>
+        
+        <div class="row">
+
+            <div th:each="imagen : ${imagenes}" class="col-lg-4 col-md-6 col-ms-12" >
+				
+               <img th:src="@{'/ejr/' + ${imagen.foto}}" th:alt="${imagen.categoria}" class="img-galery"/>
+               
+            </div>
+
+        </div>
+     
+        <section th:replace="~{layout/paginator :: pag}"></section>
+        
+    </section>
+
+    <footer th:replace="~{layout/footer :: footer}"></footer>
+
+
+    <script th:src="@{/js/scroll.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
