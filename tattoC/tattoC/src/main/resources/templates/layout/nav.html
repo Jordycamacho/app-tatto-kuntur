@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+<head th:replace="~{layout/base :: head}"></head>
+
+<body>
+    <nav th:fragment="nav" class="navbar navbar-expand-md navbar-dark bg-ligth border-7 border-dark navbar">
+        <div class="container-fluid">
+			
+			<a href="#" th:href="@{/inicio}">				
+				
+                <img th:src="@{/img/Kunturnegro.svg}" alt="Logo" class="svg-image">
+                
+			</a>
+    
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-li">
+                        <a href="/index.html" th:href="@{/inicio}">Inicio</a>
+                    </li>
+
+                    <li class="nav-li">
+                        <a href="/galery.html" th:href="@{/inicio/galeria}">Galeria</a>
+                    </li>
+
+                    <li class="nav-li">
+                        <a href="/contact.html" th:href="@{/inicio/contacto}">Contacto</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <script th:href="@{/js/scroll.js}"></script>
+</body>
+</html>

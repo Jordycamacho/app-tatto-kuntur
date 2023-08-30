@@ -1,0 +1,241 @@
+:root {
+    --letra-color: hsl(330, 7%, 76%);
+    --color-primary: #333;
+    --color-secondary: hsl(0, 0%, 0%) ;
+    --colo-terciario: rgb(126, 102, 54);
+    --color-fondo: hsl(0, 4%, 10%);
+
+}
+
+
+/*General*/
+body{
+
+    background-color: var(--color-fondo);
+
+    color: var(--letra-color);
+}
+
+.titulo-p{
+    color: var(--colo-terciario);
+    font-style: inherit;
+    font-size: 2.5em;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.titulo-t{
+    text-align: center;
+    color: var(--letra-color);
+}
+
+.texto-p{
+    color: var(--letra-color);
+}
+
+.texto-g{
+    color: var(--letra-color);
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.img-inicio{
+    display: none;
+}
+/*Complememntos*/
+.espacio{
+    width: 100%;
+    height: 70px;
+}
+
+.separador{
+    border: 1px solid var(--colo-terciario);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.centrar{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+svg{
+    color: var(--colo-terciario);
+}
+
+
+/*Botones*/
+.btn {
+    display: block;
+    border: none; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+  }
+
+.secondary {
+    margin: 50px auto;
+    background-color: var(--color-fondo); 
+    border: 2px solid var(--colo-terciario);
+    color: var(--colo-terciario); 
+} 
+.secondary:hover {
+    transition: all 1s;
+    background: var(--color-primary); 
+    color: var(--color-fondo);
+    border: 2px solid var(--color-primary);
+}
+
+.primary{
+    background-color: var(--colo-terciario); 
+    border: 2px solid var(--color-fondo);
+}
+
+.primary:hover{
+    transition: all 1s;
+    background: var(--color-primary); 
+    color: var(--color-fondo);
+    border: 2px solid var(--color-primary);
+}
+
+/*Nav*/
+
+.fondo{
+    background-color: var(--color-primary);
+    border-bottom: 2px solid var(--colo-terciario);
+}
+
+nav{
+    color: var(--letra-color);
+}
+
+.navbar{
+    position: fixed;
+    padding: 0px 0px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.nav-li{
+    display: inline-block;
+    font-size: 1.1em;
+    padding: 0px 10px;
+    margin: 13px 10px;
+    transition: all 0.3s;
+}
+
+.nav-li:hover{
+    border-bottom: 2px solid var(--colo-terciario);
+    color: var(--colo-terciario);
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Hereda el color del texto del elemento padre */
+}
+
+.svg-image{
+    width: 200px;
+    height: auto;
+    padding: 0;
+}
+
+/*Inicio*/
+.tarjeta{
+    width: 80%;
+    height: 300px;
+    background-color: var(--colo-terciario);
+    margin: 50px auto;
+    padding: 30px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.con-img{
+  display: grid;
+  place-items: center;
+}
+
+.ns{
+    max-width: 90%;
+    margin-bottom: 30px;
+}
+
+.tarjeta h4{
+    color: var(--color-fondo);
+}
+
+
+/*Galeria */
+#galeria .col-lg-4{
+    margin: 0;
+    padding: 25px;
+}
+
+#galeria img{
+    width: 100%;
+}
+
+#galeria img:hover {
+    transition: all 0.4s;
+    border: 10px solid var(--color-fondo);
+    cursor: pointer;
+}
+
+/*Contacto*/
+.card{
+    background-color: var(--color-fondo);
+    color: var(--letra-color);
+    border: none;
+}
+
+/*Footer*/
+.footer{
+    margin-top: 50px;
+    padding: 50px;
+    text-align: center;
+    background-color: var(--color-secondary);
+}
+
+.copy{
+    text-align: center;
+}
+
+@media (min-width: 940px) {
+
+    .espacio{
+        display: none;
+    }
+    .img-inicio{
+        display:block;
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+    }
+    .dano{
+        display: none;
+    }
+    body{
+        font-size: 1.3em;
+    }
+    .card{
+        background-color: var(--color-secondary);
+        color:  var(--letra-color);
+        padding: 70px;
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50px;
+        
+    }
+}

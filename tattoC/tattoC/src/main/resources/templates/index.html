@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{layout/base :: head}"></head>
+
+<body>
+    <div class="container-fluid fondo">
+        <nav th:replace="~{layout/nav :: nav}"></nav>
+    </div>
+    
+    <div class="portada">
+		
+        <img th:src="@{/img/inicio.jpg}" class="img-inicio" />
+        
+    </div>
+    
+    <div class="espacio"></div>
+    
+    <div class="container">
+
+        <h1 class="titulo-p">Kuntur Tattoo</h1>
+
+        <div class="separador"></div>
+
+        <div class="container">
+
+            <h5 class="titulo-t"> Bienvenido a Kuntur Tattoo: Donde el Arte y la Autenticidad se Fusionan</h5><br/>
+
+            <div class="container">
+
+                <div class="container">
+
+                    <p class="texto-g">
+						Estamos emocionados de ser parte de tu viaje artístico y de ayudarte a llevar tus ideas a la
+                        realidad.
+                        No dudes en ponerte en contacto con nosotros para programar una consulta o para hacer cualquier
+                        pregunta
+                        que tengas. ¡Esperamos ser tu destino para la expresión creativa y
+                        la transformación artística!
+					</p>
+
+                    <button class="btn secondary"> <a th:href="@{/inicio/contacto}"><b>CONTACTO</b></a> </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+
+            <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 512 512">
+                <path
+                    d="M373.5 27.1C388.5 9.9 410.2 0 433 0c43.6 0 79 35.4 79 79c0 22.8-9.9 44.6-27.1 59.6L277.7 319l-10.3-10.3-64-64L193 234.3 373.5 27.1zM170.3 256.9l10.4 10.4 64 64 10.4 10.4-19.2 83.4c-3.9 17.1-16.9 30.7-33.8 35.4L24.4 510.3l95.4-95.4c2.6 .7 5.4 1.1 8.3 1.1c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32c0 2.9 .4 5.6 1.1 8.3L1.7 487.6 51.5 310c4.7-16.9 18.3-29.9 35.4-33.8l83.4-19.2z" />
+            </svg>
+
+            <h4>TATUAJES</h4>
+
+            <p> Dale un vistaso a mi galeria de proyectos</p>
+
+            <button class="btn primary"> <a th:href="@{/inicio/galeria}"><b> GALERIA </b></a> </button>
+
+        </div>
+
+        <div class="con-img">
+
+            <img th:src="@{/img/ribete-3-Z.png}" class="ns">
+
+        </div>
+
+        <div class="container">
+
+            <h5 class="titulo-t"> Compromiso con el cliente</h5>
+
+            <div class="container">
+
+                <div class="container">
+                    <p class="texto-g">
+                        la seguridad, la higiene y la satisfacción del cliente son nuestra máxima prioridad. Nuestro
+                        equipo altamente
+                        capacitado utiliza equipos de vanguardia y sigue prácticas rigurosas de esterilización para
+                        brindarte una
+                        experiencia segura y cómoda. Cada consulta es una oportunidad para colaborar y transformar tus
+                        visiones en
+                        tatuajes duraderos y hermosos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="separador"></div>
+    
+    <div class="container">
+
+
+        <h5 class="titulo-t"> Nuestra Misión </h5> <br>
+
+        <div class="container">
+
+            <div class="container">
+                <p class="texto-g">
+                    Nuestra misión es simple pero profunda: crear tatuajes que trasciendan el arte superficial y se
+                    conviertan en una extensión
+                    genuina de tu identidad. Cada tatuaje que creamos cuenta una historia, representa una creencia o
+                    captura un momento especial.
+                    Nos esforzamos por brindarte no solo una obra maestra visual, sino una experiencia que te empodere y
+                    celebre tu unicidad.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="con-img">
+
+            <img th:src="@{/img/ribete-3-Z.png}" class="ns">
+
+    </div>
+
+    <footer th:replace="~{layout/footer :: footer}"></footer>
+
+    <script th:src="@{/js/scroll.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous">
+    </script>
+    
+</body>
+
+</html>
