@@ -24,6 +24,7 @@ import com.example.tattoC.dao.IContactDAO;
 import com.example.tattoC.dao.ImageDAO;
 import com.example.tattoC.entity.Contact;
 import com.example.tattoC.entity.Imagen;
+import com.example.tattoC.repository.ImageRepository;
 import com.example.tattoC.utils.RenderizadorPaginas;
 
 import jakarta.validation.Valid;
@@ -39,15 +40,23 @@ public class DemoController {
 	@Qualifier("icontactdao")
 	private IContactDAO iContactDAO;
 	
+	@Autowired
+	@Qualifier("imagerepository")
+	private ImageRepository imageRepository;
+	
 	/*URL de administracion*/
 	
 	
 	@GetMapping("/ad")
-	public String showDemo(Model model) {
+	public ModelAndView showDemo() {
 		
-		model.addAttribute("imagenes", new Imagen());
+		ModelAndView mav = new ModelAndView("admin");
 		
-		return"admin";
+		mav.addObject("imagenes", new Imagen());
+		
+		mav.addObject("imagen", imageRepository.ListAllImage());
+				
+		return mav;  
 	}
 	
 	@PostMapping("/ad")
@@ -83,6 +92,7 @@ public class DemoController {
 		return"redirect:/ad";
 	}
 	
+	
 	@GetMapping("/ad/lista")
 	public ModelAndView showListContact() {
 		
@@ -102,6 +112,14 @@ public class DemoController {
 		
 	}
 	
+	@GetMapping("/ad/removeimages")
+	public ModelAndView removeImages(@RequestParam(name = "id", required = true) Long id) {
+		
+		imageRepository.removeImage(id);
+		
+		return showDemo();
+		
+	}
 	
 	
 	/*URL de usuarios*/
@@ -116,7 +134,7 @@ public class DemoController {
 	@GetMapping("/inicio/galeria")
 	public String showGalery(@RequestParam(name = "page", defaultValue = "0")int page ,Model model) {
 		
-		PageRequest userPageable = PageRequest.of(page, 3);
+		PageRequest userPageable = PageRequest.of(page, 6);
 		
 		Page<Imagen> imagen = imageDAO.findAll(userPageable);
 		
