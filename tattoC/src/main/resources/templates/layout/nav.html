@@ -6,9 +6,10 @@
 <body>
     <nav th:fragment="nav" class="navbar navbar-expand-md navbar-dark bg-ligth border-7 border-dark navbar">
         <div class="container-fluid">
-
-            <img th:src="@{/img/Kunturnegro.svg}" alt="Logo" class="svg-image">
-    
+			
+			<a th:href="@{/inicio}">			
+                <img th:src="@{/img/Kunturnegro.svg}" alt="Logo" class="svg-image">
+			</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

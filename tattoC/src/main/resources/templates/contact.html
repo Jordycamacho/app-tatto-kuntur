@@ -49,11 +49,13 @@
                     <label for="exampleFormControlInput1" class="form-label"> <b>CORREO</b></label>
                     <input type="email" class="form-control" th:field="*{correo}" th:value="${correo}" id="exampleFormControlInput1"
                         placeholder="name@example.com">
+                    <div class="text-danger" th:errors="*{correo}"></div>
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label" ><b>DETALLES</b></label>
                     <textarea class="form-control" th:field="*{descripcion}"  th:value="${descripcion}" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    <div class="text-danger" th:errors="*{descripcion}"></div>
                 </div>
                 
                 <button class="btn secondary" type="submit"> 
